@@ -1,0 +1,531 @@
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale="1.0">
+<title>PRODUCTS</title>
+<link rel="icon" type="image/x-icon" href="./IMAGES/favicon.ico">
+<link rel="stylesheet" type="text/css "href="../CSS/Websitestyle.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script language="JavaScript">
+var Quantity1 = 0,
+    Quantity2 = 0,
+    Quantity3 = 0,
+    Quantity4 = 0,
+    Quantity5 = 0,
+    Quantity6 = 0,
+    PriceItem1 = 5495,
+    PriceItem2 = 6895,
+    PriceItem3 = 11295,
+    PriceItem4 = 8895,
+    PriceItem5 = 9395,
+    PriceItem6 = 4795,
+    ItemName1 = "Nike Dunk Low Retro",
+    ItemName2 = "Nike Air Force 1 '07 LV8",
+    ItemName3 = "Air Jordan 9 Retro",
+    ItemName4 = "Jordan Spizike Low",
+    ItemName5 = "Nike Air Zoom Spiridon Cage 2",
+    ItemName6 = "Nike Impact 4",
+    Stock1 = 5,
+    Stock2 = 5,
+    Stock3 = 2,
+    Stock4 = 3,
+    Stock5 = 1,
+    Stock6 = 7,
+    TotalAll = 0,
+    ItemCheck = 0;
+
+function updateTotalPayment() {
+    TotalAll = Quantity1 * PriceItem1 +
+               Quantity2 * PriceItem2 +
+               Quantity3 * PriceItem3 +
+               Quantity4 * PriceItem4 +
+               Quantity5 * PriceItem5 +
+               Quantity6 * PriceItem6;
+    document.getElementById('TotalPayment').innerHTML = 'Total <span class="price" style="color:black"><b>₱' + TotalAll + '</b></span>';
+    
+    ItemCheck = Quantity1 + Quantity2 + Quantity3 + Quantity4 + Quantity5 + Quantity6;
+}
+
+function Buy1(){
+    Quantity1 = parseInt(prompt('Enter Amount: '));
+    var StockRemain1 = Stock1 - Quantity1;
+    var TotalItemPrice1 = Quantity1 * PriceItem1;
+
+    if (Quantity1 <= Stock1){
+        document.getElementById('ItemRow1').innerHTML = '<div class="col-25">' +
+            '<p class="Quantity">' + Quantity1 + '</p>' +
+            '</div>' +
+            '<div class="col-25">' +
+            '<p class="Item">' + ItemName1 + '</p>' +
+            '</div>' +
+            '<div class="col-25">' +
+            '<span class="Price">₱' + TotalItemPrice1 + '</span>' +
+            '</div>';
+
+        document.getElementById('ItemStock1').innerHTML = StockRemain1 + ' are left in stock';
+
+        updateTotalPayment();
+    }
+    else {
+        Quantity1 = Quantity1 - 1;
+        alert("Ran out of Stock!");
+    }
+}
+
+function Buy2(){
+    Quantity2 = parseInt(prompt('Enter Amount: '));
+    var StockRemain2 = Stock2 - Quantity2;
+    var TotalItemPrice2 = Quantity2 * PriceItem2;
+
+    if (Quantity2 <= Stock2){
+        document.getElementById('ItemRow2').innerHTML = '<div class="col-25">' +
+            '<p class="Quantity">' + Quantity2 + '</p>' +
+            '</div>' +
+            '<div class="col-25">' +
+            '<p class="Item">' + ItemName2 + '</p>' +
+            '</div>' +
+            '<div class="col-25">' +
+            '<span class="Price">₱' + TotalItemPrice2 + '</span>' +
+            '</div>';
+
+        document.getElementById('ItemStock2').innerHTML = StockRemain2 + ' are left in stock';
+
+        updateTotalPayment();
+    }
+    else {
+        Quantity2 = Quantity2 - 1;
+        alert("Ran out of Stock!");
+    }
+}
+
+function Buy3(){
+    Quantity3 = parseInt(prompt('Enter Amount: '));
+    var StockRemain3 = Stock3 - Quantity3;
+    var TotalItemPrice3 = Quantity3 * PriceItem3;
+
+    if (Quantity3 <= Stock3){
+        document.getElementById('ItemRow3').innerHTML = '<div class="col-25">' +
+            '<p class="Quantity">' + Quantity3 + '</p>' +
+            '</div>' +
+            '<div class="col-25">' +
+            '<p class="Item">' + ItemName3 + '</p>' +
+            '</div>' +
+            '<div class="col-25">' +
+            '<span class="Price">₱' + TotalItemPrice3 + '</span>' +
+            '</div>';
+
+        document.getElementById('ItemStock3').innerHTML = StockRemain3 + ' are left in stock';
+
+        updateTotalPayment();
+    }
+    else {
+        Quantity3 = Quantity3 - 1;
+        alert("Ran out of Stock!");
+    }
+}
+
+function Buy4(){
+    Quantity4 = parseInt(prompt('Enter Amount: '));
+    var StockRemain4 = Stock4 - Quantity4;
+    var TotalItemPrice4 = Quantity4 * PriceItem4;
+
+    if (Quantity4 <= Stock4){
+        document.getElementById('ItemRow4').innerHTML = '<div class="col-25">' +
+            '<p class="Quantity">' + Quantity4 + '</p>' +
+            '</div>' +
+            '<div class="col-25">' +
+            '<p class="Item">' + ItemName4 + '</p>' +
+            '</div>' +
+            '<div class="col-25">' +
+            '<span class="Price">₱' + TotalItemPrice4 + '</span>' +
+            '</div>';
+
+        document.getElementById('ItemStock4').innerHTML = StockRemain4 + ' are left in stock';
+
+        updateTotalPayment();
+    }
+    else {
+		Quantity4 = Quantity4 - 1;
+        alert("Ran out of Stock!");
+    }
+}
+
+function Buy5(){
+    Quantity5 = parseInt(prompt('Enter Amount: '));
+    var StockRemain5 = Stock5 - Quantity5;
+    var TotalItemPrice5 = Quantity5 * PriceItem5;
+
+    if (Quantity5 <= Stock5){
+        document.getElementById('ItemRow5').innerHTML = '<div class="col-25">' +
+            '<p class="Quantity">' + Quantity5 + '</p>' +
+            '</div>' +
+            '<div class="col-25">' +
+            '<p class="Item">' + ItemName5 + '</p>' +
+            '</div>' +
+            '<div class="col-25">' +
+            '<span class="Price">₱' + TotalItemPrice5 + '</span>' +
+            '</div>';
+
+        document.getElementById('ItemStock5').innerHTML = StockRemain5 + ' are left in stock';
+
+        updateTotalPayment();
+    }
+    else {
+		Quantity5 = Quantity5 - 1;
+        alert("Ran out of Stock!");
+    }
+}
+
+function Buy6(){
+    Quantity6 = parseInt(prompt('Enter Amount: '));
+    var StockRemain6 = Stock6 - Quantity6;
+    var TotalItemPrice6 = Quantity6 * PriceItem6;
+
+    if (Quantity6 <= Stock6){
+        document.getElementById('ItemRow6').innerHTML = '<div class="col-25">' +
+            '<p class="Quantity">' + Quantity6 + '</p>' +
+            '</div>' +
+            '<div class="col-25">' +
+            '<p class="Item">' + ItemName6 + '</p>' +
+            '</div>' +
+            '<div class="col-25">' +
+            '<span class="Price">₱' + TotalItemPrice6 + '</span>' +
+            '</div>';
+
+        document.getElementById('ItemStock6').innerHTML = StockRemain6 + ' are left in stock';
+
+        updateTotalPayment();
+    }
+    else {
+        Quantity6 = Quantity6 - 1;
+        alert("Ran out of Stock!");
+    }
+}
+
+function CheckOutShow(){
+    if (ItemCheck != 0){
+        document.getElementById("CheckOutForm").innerHTML = '<form onsubmit="return confirmation(event)">' +
+            '<div class="rowpay">' +
+            '<div class="col-75">' +
+            '<div class="containerpay">' +
+
+            '<div class="rowpay">' +
+            '<div class="col-50">' +
+            '<h3>Billing Address</h3>' +
+            '<label for="fname">Full Name</label>' +
+            '<input type="text" id="fname" name="firstname" placeholder="Full Name" required>' +
+            '<label for="email">Email</label>' +
+            '<input type="text" id="email" name="email" placeholder="Email" required>' +
+            '<label for="adr">Address</label>' +
+            '<input type="text" id="adr" name="address" placeholder="Address" required>' +
+            '<label for="city">City</label>' +
+            '<input type="text" id="city" name="city" placeholder="City" required>' +
+
+            '<div class="rowpay">' +
+            '<div class="col-50">' +
+            '<label for="zip">Zip</label>' +
+            '<input type="text" id="zip" name="zip" placeholder="Billing Zip Code" required>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+
+            '<div class="col-50">' +
+            '<h3>Payment</h3>' +
+            '<label for="cname">Name on Card</label>' +
+            '<input type="text" id="cname" name="cardname" placeholder="Name on Card" required>' +
+            '<label for="ccnum">Credit card number</label>' +
+            '<input type="text" id="ccnum" name="cardnumber" placeholder="Card#" required>' +
+            '<label for="expmonth">Exp Month</label>' +
+            '<input type="text" id="expmonth" name="expmonth" placeholder="Month" required>' +
+
+            '<div class="rowpay">' +
+            '<div class="col-50">' +
+            '<label for="expyear">Expiration Year</label>' +
+            '<input type="text" id="expyear" name="expyear" placeholder="Year" required>' +
+            '</div>' +
+            '<div class="col-50">' +
+            '<label for="cvv">CVV</label>' +
+            '<input type="text" id="cvv" name="cvv" placeholder="CVV" required>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+
+            '</div>' +
+            '<label>' +
+            '<input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing' +
+            '</label>' +
+            '<input type="submit" value="CHECKOUT" class="btnpay">' +
+            '</form>' +
+            '</div>' +
+            '</div>' +
+
+            '<div class="col-25">' +
+            '<div class="containerpay" id="CartArea">' +
+            '<h4><i class="fa fa-shopping-cart" style="font-size:24px"></i> Cart</h4>' +
+            '<br>' +
+            '<center><a href="#titlePlace" class="btnprod">Continue Shopping!</a></center>' +
+            '</div>' +
+            '<br>' +
+            '</div>' +
+            '<br>' +
+            '</div>' +
+            '</div>';
+    } else {
+        alert("Cannot proceed to checkout without any order.");
+    }
+}
+
+function confirmation(event) {
+    event.preventDefault();
+    var fnameConfirm = document.getElementById("fname").value,
+        emailConfirm = document.getElementById("email").value,
+        adrConfirm = document.getElementById("adr").value,
+        cityConfirm = document.getElementById("city").value,
+        zipConfirm = document.getElementById("zip").value,
+        cnameConfirm = document.getElementById("cname").value,
+        ccnumConfirm = document.getElementById("ccnum").value,
+        expmonthConfirm = document.getElementById("expmonth").value,
+        expyearConfirm = document.getElementById("expyear").value,
+        cvvConfirm = document.getElementById("cvv").value;
+
+    var userconfirm = confirm('Checkout Form: \n' +
+        'Full Name: ' + fnameConfirm + '\n' +
+        'Email: ' + emailConfirm + '\n' +
+        'Address: ' + adrConfirm + '\n' +
+        'City: ' + cityConfirm + '\n' +
+        'Billing Zip Code: ' + zipConfirm + '\n' +
+        'Card Name: ' + cnameConfirm + '\n' +
+        'Credit Card Number: ' + ccnumConfirm + '\n' +
+        'Expiration: ' + expmonthConfirm + ', ' + expyearConfirm + '\n' +
+        'CVV: ' + cvvConfirm + '\n' +
+		'Purchase Cost: ₱' + TotalAll + '\n' +
+        'Press OK to confirm purchase!');
+
+    if (userconfirm){
+        alert("Redirecting Page...");
+        window.location.href = "SUCCESSPAGE.html";
+    } else {
+        alert('Order has been canceled.');
+    }
+}
+
+</script>
+</head>
+
+
+<body>
+<div class="main-container">
+<div class="navbar">
+	<div class="header">
+        <div class="container">
+		<div class ="navbarcolor">
+            <div class="navbar">
+                <div class="logo">
+					<a href="../index.html"><img src="../IMAGES/LOGO.png" alt="Phone website logo"></a>
+				</div>
+<nav>
+<ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../WEBPAGES/ABOUT.html">About/Contact</a></li>
+    <li><a class="active" href="../WEBPAGES/PRODUCTS.html">Products</a></li>
+	<li><a href="#OrderListPlace" class="main"><i class="fa fa-shopping-cart" style="font-size:24px"></i> Cart</a></li>
+
+</ul>
+</nav>
+</div>
+</div>
+
+<div class="small-container">
+<h2 class="title" id="titlePlace">Available Products</h2>
+<div class="row">
+
+<div class="col-3">
+<a href="../WEBPAGES/PRODUCT1.html"><img src="../IMAGES/DunkRetroBlack.png" border= "2px solid gray"></a>
+<br><br>
+<h4>Nike Dunk Low Retro</h4>
+<p>₱5,495.00</p>
+<p id="ItemStock1">5 are left in stock</p>
+<button type="button" class="btnpay" id="add2cart1" onclick="Buy1()"><i class="fa fa-shopping-cart" style="font-size:24px"></i> Add to Cart</button>
+</div>
+
+<div class="col-3">
+<a href="../WEBPAGES/PRODUCT2.html"><img src="../IMAGES/AirForce1.7.png" border= "2px solid gray" width="350px" height="345px" style="margin-bottom: 20px;"></a>
+<h4>Nike Air Force 1 '07 LV8</h4>
+<p>₱6,895.00</p>
+<p id="ItemStock2">5 are left in stock</p>
+<button type="button" class="btnpay" id="add2cart2" onclick="Buy2()"><i class="fa fa-shopping-cart" style="font-size:24px"></i> Add to Cart</button>
+</div>
+
+<div class="col-3">
+<a href="../WEBPAGES/PRODUCT3.html"><img src="../IMAGES/AirRetroBlue.png" border= "2px solid gray" width="250px" height="344px"></a>
+<br><br>
+<h4>Air Jordan 9 Retro</h4>
+<p>₱11,295.00</p>
+<p id="ItemStock3">2 are left in stock</p>
+<button type="button" class="btnpay" id="add2cart3" onclick="Buy3()"><i class="fa fa-shopping-cart" style="font-size:24px"></i> Add to Cart</button>
+</div>
+
+</div>
+<br><br>
+<div class="row">
+<div class="col-3">
+<a href="../WEBPAGES/PRODUCT4.html"><img src="../IMAGES/JordanSpizikeLow.png" border= "2px solid gray"></a>
+<br><br>
+<h4>Jordan Spizike Low</h4>
+<p>₱8,895.00</p>
+<p id="ItemStock4">3 are left in stock</p>
+<button type="button" class="btnpay" id="add2cart4" onclick="Buy4()"><i class="fa fa-shopping-cart" style="font-size:24px"></i> Add to Cart</button>
+</div>
+
+<div class="col-3">
+<a href="../WEBPAGES/PRODUCT5.html"><img src="../IMAGES/AirZoom.png" border= "2px solid gray"></a>
+<br><br>
+<h4>Nike Air Zoom Spiridon Cage 2</h4>
+<p>₱9,395.00</p>
+<p id="ItemStock5">1 are left in stock</p>
+<button type="button" class="btnpay" id="add2cart5" onclick="Buy5()"><i class="fa fa-shopping-cart" style="font-size:24px"></i> Add to Cart</button>
+</div>
+
+<div class="col-3">
+<a href="../WEBPAGES/PRODUCT6.html"><img src="../IMAGES/Impact4.1.png" border= "2px solid gray"></a>
+<br><br>
+<h4>Nike Impact 4</h4>
+<p>₱4,795.00</p>
+<p id="ItemStock6">7 are left in stock</p>
+<button type="button" class="btnpay" id="add2cart6" onclick="Buy6()"><i class="fa fa-shopping-cart" style="font-size:24px"></i> Add to Cart</button>
+</div>
+</div>
+
+
+<div class="rowpay">
+<div id="OrderListPlace">
+<br><br>
+</div>
+<div class="containerlist" id ="OrderList">
+<h4><i class="fa fa-shopping-cart" style="font-size:24px"></i> Cart</h4>
+<br>
+
+
+<div class="row" id="ItemRow1">
+<div class="col-25">
+<p class="Quantity"></p>
+</div>
+<div class="col-25">
+<p class="Item"></p>
+</div>
+<div class="col-25">
+<span class="Price"></span>
+</div>
+</div>
+
+
+<div class="row" id="ItemRow2">
+<div class="col-25">
+<p class="Quantity"></p>
+</div>
+<div class="col-25">
+<p class="Item"></p>
+</div>
+<div class="col-25">
+<span class="Price"></span>
+</div>
+</div>
+
+
+<div class="row" id="ItemRow3">
+<div class="col-25">
+<p class="Quantity"></p>
+</div>
+<div class="col-25">
+<p class="Item"></p>
+</div>
+<div class="col-25">
+<span class="Price"></span>
+</div>
+</div>
+
+
+<div class="row" id="ItemRow4">
+<div class="col-25">
+<p class="Quantity"></p>
+</div>
+<div class="col-25">
+<p class="Item"></p>
+</div>
+<div class="col-25">
+<span class="Price"></span>
+</div>
+</div>
+
+
+<div class="row" id="ItemRow5">
+<div class="col-25">
+<p class="Quantity"></p>
+</div>
+<div class="col-25">
+<p class="Item"></p>
+</div>
+<div class="col-25">
+<span class="Price"></span>
+</div>
+</div>
+
+
+<div class="row" id="ItemRow6">
+<div class="col-25">
+<p class="Quantity"></p>
+</div>
+<div class="col-25">
+<p class="Item"></p>
+</div>
+<div class="col-25">
+<span class="Price"></span>
+</div>
+</div>
+
+
+<br>
+<hr>
+<br>
+<p id="TotalPayment">Total <span class="price" style="color:black"><b>₱0.00</b></span></p>
+</div>
+<a href="#CheckOutFormPlace" class="btnpay" onclick="CheckOutShow()">Proceed to Checkout</a>
+</div>
+<br><br>
+</div>
+
+<hr>
+
+<br><br>
+
+<div id="CheckOutFormPlace">
+</div>
+<br><br><br>
+
+<div id="CheckOutForm">
+
+</div>
+
+<br><br>
+
+
+</div>
+
+
+<!--Footer-->
+<div class="footer">
+	<div class="footer-bottom">
+	&copy; Facebook: NikeWare | Email: nikeware.phi@gmail.com | Contact#: 0913 768 3411
+	</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</body>
+</html>
